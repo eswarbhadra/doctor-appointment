@@ -8,4 +8,4 @@ var app = express();
 var port = 7777;
 app.use(router());
 app.listen(port);
-console.log('Doctor appointment at ' + port);
+console.log('Doctor appointment at ' + port + 'server started');

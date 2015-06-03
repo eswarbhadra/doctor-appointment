@@ -1,5 +1,5 @@
 'use strict';
 
-exports.takeAppoiment = function () {
-  console.log("Inside appointment");
+exports.takeAppoiment = function (req, res, next) {
+  console.log("doctorAppointment controller - Inside takeAppoiment method");
 }

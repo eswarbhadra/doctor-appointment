@@ -1,17 +1,16 @@
 'use strict';
 
 var express = require('express');
-//var UserController = require('./controllers/UserController');
+var doctorAppointment = require('./controllers/doctorAppointment');
 
 module.exports = function() {
   var options = {
     caseSensitive: true
   };
-console.log('inside router');
+  console.log("Inside Router");
   // Instantiate an isolated express Router instance
   var router = express.Router(options);
- // router.post('/register', UserController.register);
- // router.post('/login', UserController.login);
- // router.put('/updateProfile', auth({debug: true}), UserController.update);
+  router.get('/', doctorAppointment.takeAppoiment);
+  router.get('/appointment', doctorAppointment.takeAppoiment);
   return router;
 }
