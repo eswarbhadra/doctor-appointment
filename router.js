@@ -2,7 +2,7 @@
 
 var express = require('express');
 var doctorAppointment = require('./controllers/doctorAppointment');
-
+console.log('router');
 module.exports = function() {
   var options = {
     caseSensitive: true
