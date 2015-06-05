@@ -9,15 +9,17 @@
 
 
 var express = require('express'),
-    router = require('./router'),
-    error = require('./middlewares/errorHandler'),
-    responser = require('./middlewares/responser');
+  router = require('./router'),
+  responser = require('./middlewares/responser'),
+  errorHandler = require('./middlewares/errorHandler');
+
 
 var app = express();
 var port = 7777;
 
 app.use(router());
-app.use(error());
 app.use(responser());
+app.use(errorHandler());
+
 
 app.listen(port);
