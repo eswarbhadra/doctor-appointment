@@ -10,11 +10,15 @@
 
 var express = require('express'),
     router = require('./router'),
-    error = require('./middlewares/errorHandler');
-var app = express();
+    error = require('./middlewares/errorHandler')
+    config = require('config'),
+    responser = require('./middlewares/responser');
 
+var app = express();
 var port = 7777;
+
 app.use(router());
 app.use(error());
+app.use(responser());
+
 app.listen(port);
-console.log('Doctor appointment at ' + port + 'server started');

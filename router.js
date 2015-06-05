@@ -10,7 +10,6 @@ module.exports = function() {
   console.log("Inside Router");
   // Instantiate an isolated express Router instance
   var router = express.Router(options);
-  router.get('/', doctorAppointment.takeAppoiment);
   router.get('/appointment', doctorAppointment.takeAppoiment);
   return router;
 }
