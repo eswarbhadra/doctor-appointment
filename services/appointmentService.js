@@ -1,10 +1,10 @@
 'use strict';
 
-  var UserSchema = require('../models/Appointment').appointmentSchema,
+  var appointmentSchema = require('../models/appointment').appointmentSchema,
   config = require('config'),
   db = require('../datasource').getDb(config.MONGODB_URL),
-  Appoinment = db.model('Appoinment', appoinementSchema);
+  appointment = db.model('appointment', appointmentSchema);
 
 exports.appointment = function(entity, callback) {
-  Appoinment.create(entity, callback);
+  appointment.create(entity, callback);
 };

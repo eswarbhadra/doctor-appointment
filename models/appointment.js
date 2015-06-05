@@ -5,8 +5,8 @@ var mongoose = require('../datasource').getMongoose(),
 
 var appointmentSchema = new Schema({
   name: String,
-  age: Integer,
-  time: Timestamp
+  age: String,
+  time: String
 });
 
 /**

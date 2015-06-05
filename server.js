@@ -10,8 +10,7 @@
 
 var express = require('express'),
     router = require('./router'),
-    error = require('./middlewares/errorHandler')
-    config = require('config'),
+    error = require('./middlewares/errorHandler'),
     responser = require('./middlewares/responser');
 
 var app = express();
