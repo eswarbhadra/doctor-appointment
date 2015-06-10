@@ -4,6 +4,7 @@ var appointmentService = require('../services/appointmentService');
 
 exports.takeAppoiment = function (req, res, next) {
   var entity = req.body;
+  console.log(entity);
   if(!entity.name) {
    next({code: 400, message: 'Appointment entity is mandatory'});
   }
